@@ -8,7 +8,7 @@ class DescriptorBase:
         self.expected_type = expected_type
 
     def __set_name__(self, owner, name):
-        self.name = '_' + name
+        self.name = name
 
     def __get__(self, obj, owner):
         return obj.__dict__[self.name]
